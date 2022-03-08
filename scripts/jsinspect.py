@@ -27,11 +27,27 @@ if __name__ == "__main__":
 
             loc_cij = 0
 
+            similar_lines_i = {}
+            similar_lines_j = {}
+
             for i in range(len(output)):
                 for j in range(len(output[i]['instances'])):
-                    line_from = output[i]['instances'][j]['lines'][0] - 1
-                    line_to = output[i]['instances'][j]['lines'][1]
-                    loc_cij += (line_to - line_from)
+                    path = output[i]['instances'][j]['path']
+                    if file1 in path:
+                        if not path in similar_lines_i:
+                            similar_lines_i[path] = []
+                        similar_lines_i[path] += range(output[i]['instances'][j]['lines'][0], output[i]['instances'][j]['lines'][1])
+                        similar_lines_i[path] = list(dict.fromkeys(similar_lines_i[path]))
+                    if file2 in path:
+                        if not path in similar_lines_j:
+                            similar_lines_j[path] = []
+                        similar_lines_j[path] += range(output[i]['instances'][j]['lines'][0], output[i]['instances'][j]['lines'][1])
+                        similar_lines_j[path] = list(dict.fromkeys(similar_lines_j[path]))
+
+            for key in similar_lines_j:
+                loc_cij += len(similar_lines_j[key])
+            for key in similar_lines_i:
+                loc_cij += len(similar_lines_i[key])
 
             #Coverage book
             cov_book = loc_cij/(loc_vi + loc_vj)
@@ -39,5 +55,5 @@ if __name__ == "__main__":
             #Coverage ours
             cov_ours = (loc_cij*2)/(loc_vi + loc_vj)
 
-            print(f"Coverage book: {cov_book}")
-            print(f"Coverage ours: {cov_ours}")
+            print(f"Coverage book between {loc[x]['tag']} en {loc[y]['tag']}: {cov_book}")
+            # print(f"Coverage ours: {cov_ours}")
