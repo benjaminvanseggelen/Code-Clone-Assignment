@@ -19,7 +19,7 @@ can manually execute commands to run JsInspect and cloc.
 Build using `docker build -t 2imp25-code-clones .`
 
 Then run using 
-`docker run -it --rm -v "$PWD/out:/out" -v "$PWD/test-data:/usr/test-data" 2imp25-code-clones`. 
+`docker run -it --rm -v "$PWD/out:/out" -v "$PWD/test-data:/usr/test-data" -v "$PWD/scripts:/usr/scripts" 2imp25-code-clones`. 
 We again mount an out directory linked to the host file system
 such that you can copy out files from the container. 
 
