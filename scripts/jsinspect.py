@@ -48,12 +48,17 @@ if __name__ == "__main__":
                 loc_cij += len(similar_lines_j[key])
             for key in similar_lines_i:
                 loc_cij += len(similar_lines_i[key])
+            
+            loc_ci = 0
+            for key in similar_lines_i:
+                loc_ci += len(similar_lines_i[key])
 
             #Coverage book
             cov_book = loc_cij/(loc_vi + loc_vj)
 
             #Coverage ours
-            cov_ours = (loc_cij*2)/(loc_vi + loc_vj)
+            cov_ours = loc_ci/loc_vi
 
-            print(f"Coverage book between {loc[x]['tag']} en {loc[y]['tag']}: {cov_book}")
+            print(f"Book's coverage metric between jQuery {loc[x]['tag']} en {loc[y]['tag']}: {cov_book}")
+            print(f"Our coverage metric between jQuery {loc[x]['tag']} en {loc[y]['tag']}: {cov_ours}")
             # print(f"Coverage ours: {cov_ours}")
