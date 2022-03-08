@@ -1,12 +1,10 @@
 {
-    "threshold":     6,
+    "threshold":     10,
     "identifiers":   true,
     "literals":      true,
     "color":         true,
     "minInstances":  2,
     "ignore":        "test|spec|mock",
     "reporter":      "json",
-    "truncate":      100,
-    "reportFormat":  "json",
-    "reportFile":    "report-file.json"
+    "truncate":      100
 }
