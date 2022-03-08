@@ -1,0 +1,208 @@
+function div(a, b) {
+    if (b == 0) { 
+        return Infinity;
+    } else if (b < 0) {
+        return - div(a, -b);
+    }
+
+    let i = 0;
+    let x = b;
+
+    while (x <= a) {
+        x += b;
+        i ++;
+    }
+
+    return i;
+}
+
+// TYPE 1 CLONES
+function div(a, b) {
+    // Computes the result of a / b
+    if (b == 0) { 
+        // We will naturally want to return 0 here
+        return Infinity;
+    } else if (b < 0) {
+        // Simply take the negative of the positive b result
+        return - div(a, -b);
+    }
+
+    let i = 0;
+    let x = b;
+
+    while (x <= a) {
+        // Due to the checks at the top of the function, this is safe to do without guard
+        x += b;
+        i ++;
+    }
+
+    return i;
+}
+
+function div(a, b) {
+    if (b == 0) {return Infinity}
+    else if (b < 0) {return - div(a, -b)}
+
+    let i = 0;
+    let x = b;
+
+    while (x <= a)
+    {
+        x += b;
+        i ++;
+    }
+
+    return i;
+}
+
+function div(a, b) {
+    if (b == 0) { 
+        return Infinity
+    } else if (b < 0) {
+        return - div(a, -b)
+    }
+
+    let i = 0
+    let x = b
+
+    while (x <= a) {
+        x += b
+        i ++
+    }
+
+    return i
+}
+
+function div(a, b) {
+    if (b == 0) { return Infinity;} else if (b < 0) {return - div(a, -b);}let i = 0;let x = b;while (x <= a) {x += b;i ++;}return i;
+}
+
+
+//TYPE 2 CLONES
+
+function division(a, b) 
+{
+    if (b == 0) 
+    { 
+        return Infinity;
+    } else if (b < 0) 
+    {
+        return - division(a, -b);
+    }
+
+    let counter = 0;
+    let value = b;
+
+    while (value <= a) 
+    {
+        value += b;
+        counter ++;
+    }
+
+    return counter;
+}
+
+function div(value1, b) {
+    if (b == 0) { return Infinity; } else if (b < 0) { return - div(value1, -b); }
+
+    let i = 0;
+    let x = b;
+
+    while (x <= value1) {
+        x += b;
+        i ++;
+    }
+
+    return i;
+}
+
+function div(a, b) {
+    if (b == 0) { 
+        //More comments
+        return Infinity;
+    } else if (b < 0) {
+        //Testing
+        return - div(a, -b);
+    }
+
+    let i = 0;
+    let value = b;
+
+    while (value <= a) {
+        value += b;
+        i ++;
+    }
+
+    return i;
+}
+
+function a(b, c){if(c == 0){return Infinity;}else if(c < 0){return -a(b,-c);}let d=0;let x=c;while(x<=b){x+=c;d++;}return d;}
+
+//TYPE 3 CLONES
+
+function div(a, b, c) {
+    if (b == 0) { 
+        return Infinity;
+    } else if (b < 0) {
+        return - div(a, -b);
+    }
+
+    c = 0;
+    
+    let i = 0;
+    let x = b;
+
+    while (x <= a) {
+        x += b;
+        i ++;
+    }
+    c+=1;
+    return i;
+}
+
+function division(a, b) {
+    let f = 77;
+    f+=10;
+    if (b == 0) { 
+        return Infinity;
+    } else if (b < 0) {
+        return - division(a, -b);
+    }
+
+    let i = 0;
+    let x = b;
+
+    while (x <= a) {
+        f-=10;
+        x += b;
+        i ++;
+    }
+
+    return i;
+}
+
+function div(a, b) 
+{
+    if (b == 0) 
+    { 
+        return Infinity;
+    } else if (b < 0) 
+    {
+        return - div(a, -b);
+    }
+
+    let i = 0;
+    let x_value = 10;
+    x_value = b;
+
+    while (x_value <= a) 
+    {
+        x_value += b;
+        i ++;
+    }
+
+    return i;
+}
+
+//we calculate the division by removing all characters that we don't need and change some statements from negations to -1
+function d(y,z){if(z == 0){return Infinity;}else if(z < 0){return-1*d(y,-1*z);}let i=0;let x=z;while(x <= y){x+=z;i+=1;}return i;}  
