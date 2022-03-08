@@ -14,7 +14,7 @@ if __name__ == "__main__":
             file2 = f"../jquery-data/{loc[y]['tag']}"
 
             stream = os.popen(f"jsinspect {file1} {file2}")
-            read = stream.read()
+            read = stream.read(9999999)
 
             try:
                 output = json.loads(read)
