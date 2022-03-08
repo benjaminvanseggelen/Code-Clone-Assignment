@@ -21,12 +21,14 @@ if __name__ == "__main__":
 
             for row in src_loc_csv:
                 if len(row) >= 2 and row[1] == 'Javascript':
-                    src_loc = int(row[4])
+                    src_loc = int(row[4]) + int(row[3]) + int(row[2])
+                    # code + comment + blank
                     break
 
             for row in external_loc_csv:
                 if len(row) >= 2 and row[1] == 'Javascript':
-                    external_loc = int(row[4])
+                    external_loc = int(row[4]) + int(row[3]) + int(row[2])
+                    # code + comment + blank
                     break
 
             #total_loc = src_loc + external_loc
