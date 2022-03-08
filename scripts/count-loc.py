@@ -29,7 +29,9 @@ if __name__ == "__main__":
                     external_loc = int(row[4])
                     break
 
-            total_loc = src_loc + external_loc
+            #total_loc = src_loc + external_loc
+
+            total_loc = src_loc
             releases_loc.append({
                 'tag': release['tag'],
                 'loc': total_loc
