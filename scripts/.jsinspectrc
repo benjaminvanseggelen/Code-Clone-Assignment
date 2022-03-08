@@ -1,0 +1,10 @@
+{
+    "threshold":     50,
+    "identifiers":   true,
+    "literals":      true,
+    "color":         false,
+    "minInstances":  2,
+    "ignore":        "test|spec|mock|intro|outro|build|dist",
+    "reporter":      "json",
+    "truncate":      180
+}

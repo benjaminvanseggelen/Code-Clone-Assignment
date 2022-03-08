@@ -13,7 +13,7 @@ if __name__ == "__main__":
             file1 = f"../jquery-data/{loc[x]['tag']}"
             file2 = f"../jquery-data/{loc[y]['tag']}"
 
-            stream = os.popen(f"jsinspect --reporter json --threshold 10 --ignore \"test|spec|mock|intro|outro|build|dist\" {file1} {file2}")
+            stream = os.popen(f"jsinspect {file1} {file2}")
             read = stream.read()
 
             try:
