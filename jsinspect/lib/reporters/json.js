@@ -49,7 +49,8 @@ class JSONReporter extends BaseReporter {
         return {
           path: this._getRelativePath(instance.filename),
           lines: [instance.start.line, instance.end.line],
-          code: this._getLines(instance)
+//          code: this._getLines(instance)
+          code: ''
         };
       })
     });
