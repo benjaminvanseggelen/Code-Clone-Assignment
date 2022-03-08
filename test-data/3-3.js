@@ -1,14 +1,22 @@
-function d(y, z, k) {
-    //Lets remove all semicolons and change some variables and add variable k
-    if (z == 0) {return Infinity}
-    else if (z < 0) { return - d(y, -z) }
-    let division_answer = 0
-    k += 18
-    let keep_track_value = z
-    while (keep_track_value <= y) {
-        keep_track_value += z
-        division_answer ++
-        k = k / division_answer;
+function div(a, b) 
+{
+    if (b == 0) 
+    { 
+        return Infinity;
+    } else if (b < 0) 
+    {
+        return - div(a, -b);
     }
-    return division_answer
+
+    let i = 0;
+    let x_value = 10;
+    x_value = b;
+
+    while (x_value <= a) 
+    {
+        x_value += b;
+        i ++;
+    }
+
+    return i;
 }

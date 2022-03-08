@@ -1,23 +1,20 @@
-function d(y, z)
-{
-    //We also love a single line for every bracket!
-    if (z == 0)
-    {
+function division(a, b) {
+    let f = 77;
+    f+=10;
+    if (b == 0) { 
         return Infinity;
-        //After the return we want to do something else.
-        let c = 1;
-        c+=10;
+    } else if (b < 0) {
+        return - division(a, -b);
     }
-    else if (z < 0)
-    {
-        return - d(y, -z);
+
+    let i = 0;
+    let x = b;
+
+    while (x <= a) {
+        f-=10;
+        x += b;
+        i ++;
     }
-    let b = 0;
-    let a = z;
-    while (a <= y)
-    {
-        a += z;
-        b ++;
-    }
-    return b;
+
+    return i;
 }

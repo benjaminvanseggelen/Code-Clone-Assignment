@@ -1,17 +1,19 @@
-function divide(value1, value2) {
-    //Test whether b is 0, if so division returns infinity
-    if (value2 == 0) {
+function division(a, b) 
+{
+    if (b == 0) 
+    { 
         return Infinity;
-    } else if (value2 < 0) {
-        return - divide(value1, -value2);
+    } else if (b < 0) 
+    {
+        return - division(a, -b);
     }
 
     let counter = 0;
-    let increment = value2;
+    let value = b;
 
-    //While loop until we reach a value that is higher than a
-    while (increment <= value1) {
-        increment += value2;
+    while (value <= a) 
+    {
+        value += b;
         counter ++;
     }
 

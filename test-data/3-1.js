@@ -1,22 +1,19 @@
-function divide(value_1, value_2) {
-    if (value_2 == 0) {
+function div(a, b, c) {
+    if (b == 0) { 
         return Infinity;
-    } else if (value_2 < 0) {
-        return - divide(value_1, -value_2);
+    } else if (b < 0) {
+        return - div(a, -b);
     }
 
-    let counter = 0;
-    //We want to calculate another value
-    let other_value = 77;
-    let base_value = value_2;
+    c = 0;
+    
+    let i = 0;
+    let x = b;
 
-    //While loop until we reach a value that is higher than a
-    while (base_value <= value_1) {
-        //We count how many times value 2 fits into value 1
-        base_value += value_2;
-        other_value *= 77;
-        counter ++;
+    while (x <= a) {
+        x += b;
+        i ++;
     }
-
-    return counter;
+    c+=1;
+    return i;
 }

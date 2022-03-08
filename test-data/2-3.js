@@ -1,22 +1,19 @@
-function division(a1, a2)
-{
-    if (a2 == 0)
-    {
+function div(a, b) {
+    if (b == 0) { 
+        //More comments
         return Infinity;
-    } else if (a2 < 0)
-    {
-        return - division(a1, -a2);
+    } else if (b < 0) {
+        //Testing
+        return - div(a, -b);
     }
 
-    //We define the variables that we need for calculating the division
-    let count = 0;
-    let c = a2;
+    let i = 0;
+    let value = b;
 
-    while (c <= a1)
-    {
-        c += a2;
-        count ++;
+    while (value <= a) {
+        value += b;
+        i ++;
     }
 
-    return count;
+    return i;
 }

@@ -1,8 +1,13 @@
-function d(y, z) {
-    if (z == 0) { return Infinity; }
-    else if (z < 0) { return - d(y, -z); }
-    let b = 0;
-    let a = z;
-    while (a <= y) { a += z; b ++; }
-    return b;
+function div(value1, b) {
+    if (b == 0) { return Infinity; } else if (b < 0) { return - div(value1, -b); }
+
+    let i = 0;
+    let x = b;
+
+    while (x <= value1) {
+        x += b;
+        i ++;
+    }
+
+    return i;
 }

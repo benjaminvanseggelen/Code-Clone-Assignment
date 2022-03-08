@@ -1,0 +1,179 @@
+[
+    {
+        "id": "f383c25245026cfdaaa543df5e3d308b91c4f5d2",
+        "instances": [
+            {
+                "path": "base.js",
+                "lines": [
+                    2,
+                    3
+                ],
+                "code": "if (b == 0) { \r\n    return Infinity;\r"
+            },
+            {
+                "path": "base.js",
+                "lines": [
+                    4,
+                    6
+                ],
+                "code": "} else if (b < 0) {\r\n    return - div(a, -b);\r\n}\r"
+            }
+        ]
+    },
+    {
+        "id": "4acf4b2df84093a68778c1f9497588f4e27cdf0c",
+        "instances": [
+            {
+                "path": "2-1.js",
+                "lines": [
+                    3,
+                    4
+                ],
+                "code": "if (value2 == 0) {\r\n    return Infinity;\r"
+            },
+            {
+                "path": "2-1.js",
+                "lines": [
+                    5,
+                    7
+                ],
+                "code": "} else if (value2 < 0) {\r\n    return - divide(value1, -value2);\r\n}\r"
+            }
+        ]
+    }
+]
+// 2-2
+[
+    {
+        "id": "f383c25245026cfdaaa543df5e3d308b91c4f5d2",
+        "instances": [
+            {
+                "path": "base.js",
+                "lines": [
+                    2,
+                    3
+                ],
+                "code": "if (b == 0) { \r\n    return Infinity;\r"
+            },
+            {
+                "path": "base.js",
+                "lines": [
+                    4,
+                    6
+                ],
+                "code": "} else if (b < 0) {\r\n    return - div(a, -b);\r\n}\r"
+            }
+        ]
+    },
+    {
+        "id": "7b38ac99ecd9cbc6363a3916a9d25b180211481a",
+        "instances": [
+            {
+                "path": "2-2.js",
+                "lines": [
+                    2,
+                    3
+                ],
+                "code": "if (z == 0) { return Infinity; }\r\nelse if (z < 0) { return - d(y, -z); }\r"
+            },
+            {
+                "path": "2-2.js",
+                "lines": [
+                    3,
+                    3
+                ],
+                "code": "else if (z < 0) { return - d(y, -z); }\r"
+            }
+        ]
+    }
+]
+
+[
+    {
+        "id": "f383c25245026cfdaaa543df5e3d308b91c4f5d2",
+        "instances": [
+            {
+                "path": "base.js",
+                "lines": [
+                    2,
+                    3
+                ],
+                "code": "if (b == 0) { \r\n    return Infinity;\r"
+            },
+            {
+                "path": "base.js",
+                "lines": [
+                    4,
+                    6
+                ],
+                "code": "} else if (b < 0) {\r\n    return - div(a, -b);\r\n}\r"
+            }
+        ]
+    },
+    {
+        "id": "8c55db67925f94378b583f212389fbafd73befc8",
+        "instances": [
+            {
+                "path": "2-3.js",
+                "lines": [
+                    3,
+                    5
+                ],
+                "code": "if (a2 == 0)\r\n{\r\n    return Infinity;\r"
+            },
+            {
+                "path": "2-3.js",
+                "lines": [
+                    6,
+                    9
+                ],
+                "code": "} else if (a2 < 0)\r\n{\r\n    return - division(a1, -a2);\r\n}\r"
+            }
+        ]
+    }
+]
+
+[
+    {
+        "id": "f383c25245026cfdaaa543df5e3d308b91c4f5d2",
+        "instances": [
+            {
+                "path": "base.js",
+                "lines": [
+                    2,
+                    3
+                ],
+                "code": "if (b == 0) { \r\n    return Infinity;\r"
+            },
+            {
+                "path": "base.js",
+                "lines": [
+                    4,
+                    6
+                ],
+                "code": "} else if (b < 0) {\r\n    return - div(a, -b);\r\n}\r"
+            }
+        ]
+    },
+    {
+        "id": "49bff9f340ac5bc5e91a4c629fc698e449a28578",
+        "instances": [
+            {
+                "path": "2-4.js",
+                "lines": [
+                    1,
+                    1
+                ],
+                "code": "function a(b, c){if(c == 0){return Infinity;}else if(c < 0){return -a(b,-c);}let d=0;let x=c;while(x<=b){x+=c;d++;}return d;}\r"
+            },
+            {
+                "path": "2-4.js",
+                "lines": [
+                    1,
+                    1
+                ],
+                "code": "function a(b, c){if(c == 0){return Infinity;}else if(c < 0){return -a(b,-c);}let d=0;let x=c;while(x<=b){x+=c;d++;}return d;}\r"
+            }
+        ]
+    }
+]
