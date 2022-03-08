@@ -13,12 +13,14 @@ if __name__ == "__main__":
             file1 = f"../jquery-data/{loc[x]['tag']}"
             file2 = f"../jquery-data/{loc[y]['tag']}"
 
-            stream = os.popen(f"jsinspect --reporter json --threshold 10 {file1} {file2}")
+            stream = os.popen(f"jsinspect --reporter json --threshold 10 --ignore \"test|spec|mock|intro|outro|build|dist\" {file1} {file2}")
             read = stream.read()
-            if read == "":
+
+            try:
+                output = json.loads(read)
+            except ValueError as e:
+                print(f"No JSON continueing: {read}")
                 continue
-        
-            output = json.loads(read)
             
             loc_vi = loc[x]['loc'] 
             loc_vj = loc[y]['loc'] 
@@ -26,12 +28,7 @@ if __name__ == "__main__":
             loc_cij = 0
 
             for i in range(len(output)):
-                # Check whether we are not adding things of the same file
-                prev_path = ''
                 for j in range(len(output[i]['instances'])):
-                    if prev_path == output[i]['instances'][j]['path']:
-                        continue
-                    prev_path = output[i]['instances'][j]['path']
                     line_from = output[i]['instances'][j]['lines'][0] - 1
                     line_to = output[i]['instances'][j]['lines'][1]
                     loc_cij += (line_to - line_from)
