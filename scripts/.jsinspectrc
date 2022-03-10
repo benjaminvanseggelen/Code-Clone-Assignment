@@ -4,7 +4,7 @@
     "literals":      true,
     "color":         false,
     "minInstances":  2,
-    "ignore":        "test|spec|mock|intro|outro|build|dist|external",
+    "ignore":        "test|spec|mock|intro|outro|build|dist|external|.min",
     "reporter":      "json",
     "truncate":      180
 }

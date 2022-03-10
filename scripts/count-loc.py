@@ -14,10 +14,10 @@ if __name__ == "__main__":
         for release in releases:
             print(f"Executing Cloc for release {release['tag']}")
             src_loc_csv = csv.reader(os.popen(f"cloc --csv --exclude-lang=CSS,HTML --quiet ../jquery-data/{release['tag']}/src").read().split('\n'))
-            external_loc_csv = csv.reader(os.popen(f"cloc --csv --exclude-lang=CSS,HTML --quiet ../jquery-data/{release['tag']}/external").read().split('\n'))
+            #external_loc_csv = csv.reader(os.popen(f"cloc --csv --exclude-lang=CSS,HTML --quiet ../jquery-data/{release['tag']}/external").read().split('\n'))
 
             src_loc = 0
-            external_loc = 0
+            #external_loc = 0
 
             for row in src_loc_csv:
                 if len(row) >= 2 and row[1] == 'Javascript':
@@ -25,11 +25,13 @@ if __name__ == "__main__":
                     # code + comment + blank
                     break
 
+            '''
             for row in external_loc_csv:
                 if len(row) >= 2 and row[1] == 'Javascript':
                     external_loc = int(row[4]) + int(row[3]) + int(row[2])
                     # code + comment + blank
                     break
+            '''
 
             #total_loc = src_loc + external_loc
 

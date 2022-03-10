@@ -10,8 +10,8 @@ if __name__ == "__main__":
 
     for x in range(len(loc)):    
         for y in range(x + 1, len(loc)):
-            file1 = f"../jquery-data/{loc[x]['tag']}"
-            file2 = f"../jquery-data/{loc[y]['tag']}"
+            file1 = f"../jquery-data/{loc[x]['tag']}/src"
+            file2 = f"../jquery-data/{loc[y]['tag']}/src"
 
             stream = os.popen(f"jsinspect {file1} {file2}")
             read = stream.read(9999999)
@@ -59,6 +59,6 @@ if __name__ == "__main__":
             #Coverage ours
             cov_ours = loc_ci/loc_vi
 
-            print(f"Book's coverage metric between jQuery {loc[x]['tag']} en {loc[y]['tag']}: {cov_book}")
-            print(f"Our coverage metric between jQuery {loc[x]['tag']} en {loc[y]['tag']}: {cov_ours}")
+            #print(f"Book's coverage metric between jQuery {loc[x]['tag']} en {loc[y]['tag']}: {cov_book}")
+            print(f"{loc[x]['tag']}, {loc[y]['tag']}, {cov_ours}")
             # print(f"Coverage ours: {cov_ours}")
